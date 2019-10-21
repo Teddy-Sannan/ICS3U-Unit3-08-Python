@@ -10,9 +10,11 @@ def main():
     while True:
         try:
             # calculates if year is a leap year
+            # input
             year = int(input("Please enter a year: "))
             print()
-        
+
+            # process and output
             if year % 4 == 0 and year % 100 != 0:
                 print("It is a leap year")
             if year % 4 != 0:
@@ -23,12 +25,14 @@ def main():
                 if year % 400 == 0 and year % 100 == 0:
                     print("It is a leap year")
 
+        # prevents crashing
         except ValueError:
             print()
             print("Invalid Input")
             print()
             continue
 
+        # breaks out of loop
         else:
             break
 
